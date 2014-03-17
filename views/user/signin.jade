@@ -1,0 +1,19 @@
+extends ../layout
+
+block title
+  title #{__('로그인')}
+
+block content
+  form(action='/signin', method='POST', autocomplete='off')
+    div.col-lg-offset-4.col-lg-4
+      h2 #{__('로그인')}
+      div.form-group
+        div.controls
+          input.form-control.input-xlarge(name="username", type="text", placeholder="#{__('사용자 명')}")
+      div.form-group
+        div.controls
+          input.form-control.input-xlarge(name="password", type="password", placeholder="#{__('비밀번호')}")
+
+      div.form-group
+        div.controls
+          button.btn.btn-primary #{__('로그인')}

@@ -1,0 +1,19 @@
+extends ../layout
+
+block title
+  title #{__('회원 가입')}
+
+block content
+  form(action='/signup', method='POST', autocomplete='off')
+    div.col-lg-offset-4.col-lg-4
+      h2 #{__('회원 가입')}
+      div.form-group
+        div.controls
+          input.form-control.input-xlarge(name="username", type="text", placeholder="#{__('사용자 명')}")
+      div.form-group
+        div.controls
+          input.form-control.input-xlarge(name="password", type="password", placeholder="#{__('비밀번호')}")
+
+      div.form-group
+        div.controls
+          button.btn.btn-primary #{__('저장')}

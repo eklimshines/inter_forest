@@ -1,0 +1,20 @@
+header.navbar.navbar-inverse.navbar-fixed-top.wiki-navbar(role='navigation')
+  ul.nav.navbar-nav.navbar-right
+    li.dropdown
+      a(data-toggle="dropdown").dropdown-toggle
+        i.glyphicon.glyphicon-user
+        | &nbsp;
+        - if (req.session.user)
+          | #{req.session.user.username}
+        - else
+          | #{__('로그인')}
+        b.caret
+      ul.dropdown-menu
+        - if (req.session.user)
+          li
+            a(href='/signout') #{__('로그아웃')}
+        - else 
+          li
+            a(href='/signin') #{__('로그인')}
+          li
+            a(href='/signup') #{__('회원 가입')}

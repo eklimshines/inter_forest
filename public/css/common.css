@@ -1,0 +1,33 @@
+.wiki-footer {
+  clear: both;
+  margin-top: 40px;
+  padding-top: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-top: 1px solid #EEE;
+}
+
+.wiki-navbar {
+  color: #ffffff;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.wiki-container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.wiki-footer {
+  clear: both;
+  margin-top: 40px;
+  padding-top: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-top: 1px solid #EEE;
+}
+
+body {
+  position: relative;
+  padding-top: 60px;
+}
