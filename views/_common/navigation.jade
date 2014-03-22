@@ -1,20 +1,44 @@
-header.navbar.navbar-inverse.navbar-fixed-top.wiki-navbar(role='navigation')
-  ul.nav.navbar-nav.navbar-right
-    li.dropdown
-      a(data-toggle="dropdown").dropdown-toggle
-        i.glyphicon.glyphicon-user
-        | &nbsp;
-        - if (req.session.user)
-          | #{req.session.user.username}
-        - else
-          | #{__('로그인')}
-        b.caret
-      ul.dropdown-menu
-        - if (req.session.user)
-          li
-            a(href='/signout') #{__('로그아웃')}
-        - else 
-          li
-            a(href='/signin') #{__('로그인')}
-          li
-            a(href='/signup') #{__('회원 가입')}
+header.navbar.navbar-fixed-top.navbar-inverse(role='navigation')
+  div.container
+    div.navbar-header
+      button.navbar-toggle(type="button", data-toggle="collapse", data-target=".navbar-collapse")
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a(href='#').navbar-brand INTERFACE
+    div.collapse.navbar-collapse
+      ul.nav.navbar-nav
+        li.active
+          a(href="#") Home
+        li
+          a(href="#") About
+        li
+          a(href="#") Notice
+        li
+          a(href="#") Activity
+        li
+          a(href="#") Photo
+        li
+          a(href="#") Study
+        li
+          a(href="#") Contact
+      ul.nav.navbar-nav.navbar-right
+        li.dropdown
+          a(data-toggle="dropdown").dropdown-toggle
+            i.glyphicon.glyphicon-user
+            | &nbsp;
+            - if (req.session.user)
+             | #{req.session.user.username}
+            - else
+             | #{__('로그인')}
+            b.caret
+          ul.dropdown-menu
+            - if (req.session.user)
+              li
+                a(href='/signout') #{__('로그아웃')}
+            - else 
+              li
+                a(href='/signin') #{__('로그인')}
+              li
+                a(href='/signup') #{__('회원 가입')}
